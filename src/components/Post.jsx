@@ -21,7 +21,9 @@ const Post = () => {
     <div className="user-post">
       {!isLoading && <Link to="/">Back</Link>}
 
-      <h2>{post?.title || <Skeleton />}</h2>
+      <h2 style={{ color: "#fff" }}>
+        {post?.title || <Skeleton highlightColor="red" />}
+      </h2>
       <p>{post?.body || <Skeleton count={3} />}</p>
     </div>
   );
